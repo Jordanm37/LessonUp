@@ -1,0 +1,10 @@
+.EmailFieldButton {
+  width: 100%;
+  padding: 15px;
+}
+
+@media (max-width: 575px) {
+  .EmailFieldButton {
+    margin-top: 1rem;
+  }
+}

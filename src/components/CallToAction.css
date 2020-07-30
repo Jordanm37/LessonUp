@@ -1,0 +1,22 @@
+.CTA {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.CTAHeading {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.CTAButton {
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  .CTA {
+    padding: 0;
+    margin-top: 3rem;
+  }
+}

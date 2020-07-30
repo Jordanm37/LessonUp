@@ -1,0 +1,108 @@
+nav {
+  background-color: #eccfd6;
+  border-radius: 0px 0px 400px 400px;
+  box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggler {
+  padding: 0;
+  padding-left: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 20px 0 20px 0;
+  padding-left: 60px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.navbar-brand:hover {
+  color: #3040c4 !important;
+}
+
+.nav-link {
+  margin-left: 50px;
+  font-weight: 400;
+  color: #101a2b !important;
+  font-size: 17px;
+}
+
+@media (max-width: 1125px) {
+  .nav-link {
+    margin-left: 10px;
+  }
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+button.navbar-toggler {
+  margin-right: 60px;
+}
+
+@media (max-width: 575px) {
+  nav {
+    border-radius: 0;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+
+  .navbar-brand {
+    padding-left: 0;
+  }
+
+  button.navbar-toggler {
+    margin-right: 0;
+  }
+
+  .calltobutton {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .nav-link {
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+
+  .navbar-brand {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+
+  button.navbar-toggler {
+    margin-right: 0;
+  }
+
+  .small-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 27px;
+    padding-left: 30px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../images/menu-icon.png") !important;
+  height: 40px !important;
+  width: 40px !important;
+}

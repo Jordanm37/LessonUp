@@ -1,0 +1,71 @@
+.NumberGroup {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.Number {
+  position: relative;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+
+  padding: 18.75px 0;
+  border-radius: 50%;
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+
+  background: #3040c4;
+  color: #fff;
+}
+
+.NumberDescription {
+  text-align: left;
+  margin: auto 0;
+  font-size: 25px;
+}
+
+.NumberDescription i {
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .NumberDescription {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Number {
+    height: 60px;
+    width: 60px;
+
+    padding: 15px 0;
+
+    font-size: 25px;
+  }
+
+  .NumberDescription {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .NumberDescription {
+    padding: 0 2rem;
+    margin-top: 1rem;
+
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .Number {
+    height: 50px;
+    width: 50px;
+
+    padding: 12.5px 0;
+
+    font-size: 25px;
+  }
+}

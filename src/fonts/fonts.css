@@ -1,0 +1,59 @@
+/* Book – Normal */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("MaisonNeue-Book.woff2") format("woff2"),
+    url("MaisonNeue-Book.woff") format("woff"),
+    url("MaisonNeue-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Book – Bold */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("MaisonNeue-Bold.woff2") format("woff2"),
+    url("MaisonNeue-Bold.woff") format("woff"),
+    url("MaisonNeue-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Book – Normal Italic */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("MaisonNeue-BookItalic.woff2") format("woff2"),
+    url("MaisonNeue-BookItalic.woff") format("woff"),
+    url("MaisonNeue-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Book – Bold Italic */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("MaisonNeue-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Book – Medium */
+@font-face {
+  font-family: "Maison Neue";
+  src: url("MaisonNeue-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("MaisonNeue-Mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BlackTie";
+  src: url("BlackTie-Light-webfont.woff2") format("woff2"),
+    url("BlackTie-Light-webfont.woff") format("woff"),
+    url("BlackTie-Light-webfont.ttf") format("truetype");
+}

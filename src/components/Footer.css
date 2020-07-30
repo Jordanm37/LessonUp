@@ -1,0 +1,41 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+li {
+  margin-top: 10px;
+}
+
+li:hover {
+  color: #f9d9eb;
+}
+
+.contact {
+  font-size: 12.5px;
+}
+
+.small-show {
+  display: none;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #ffffff !important;
+}
+
+.footer-container a:hover {
+  color: #f9d9eb !important;
+}
+
+@media (max-width: 575px) {
+  .footer-hidden {
+    display: none;
+  }
+
+  .small-show {
+    display: block;
+  }
+}

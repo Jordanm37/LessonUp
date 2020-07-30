@@ -1,0 +1,77 @@
+.ContactListGroup {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ContactListSymbol {
+  position: relative;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+
+  padding: 18.75px 0;
+  border-radius: 50%;
+
+  font-family: "BlackTie";
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+
+  background: #3040c4;
+  color: #fff;
+}
+
+.ContactListInfo {
+  text-align: left;
+  margin: auto 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.NumberDescription i {
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .ContactListInfo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ContactListSymbol {
+    height: 60px;
+    width: 60px;
+
+    padding: 15px 0;
+
+    font-size: 25px;
+  }
+
+  .ContactListInfo {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ContactListGroup {
+    margin-top: 1rem;
+  }
+
+  .ContactListInfo {
+    padding: 0 2rem;
+    margin-top: 1rem;
+
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .ContactListSymbol {
+    height: 60px;
+    width: 60px;
+
+    padding: 12.5px 0;
+
+    font-size: 25px;
+  }
+}

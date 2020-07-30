@@ -1,0 +1,188 @@
+import React from "react"
+import { Container, Row, Col, Navbar, Nav } from "react-bootstrap"
+import { Link } from "gatsby"
+import Typed from "react-typed"
+import styled from "styled-components"
+import "./Banner.css"
+
+const MenuButton = styled.button`
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  background-color: #3040c4;
+  padding: 15px 30px 15px 30px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin-right: 60px;
+
+  &:hover {
+    background-color: white;
+    color: #3040c4;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 575px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 576px) and (max-width: 767px) {
+    margin-right: 20px;
+    padding: 10px 15px 10px 15px;
+    font-size: 10px;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px;
+    margin-right: 30px;
+    padding: 10px 25px 10px 25px;
+  }
+`
+
+const CallButton = styled.button`
+  border: none;
+  display: none;
+  height: 50px;
+  width: 50px;
+
+  padding: 12.5px 0;
+  border-radius: 50%;
+
+  font-family: "BlackTie";
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+
+  background: #3040c4;
+  color: #fff;
+
+  @media (max-width: 575px) {
+    display: inline;
+  }
+`
+
+const ToggleButton = styled.button`
+  border: none;
+  display: none;
+  height: 50px;
+  width: 50px;
+
+  padding: 12.5px 0;
+  border-radius: 50%;
+
+  font-family: "BlackTie";
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+
+  background: #3040c4;
+  color: #fff;
+
+  @media (max-width: 575px) {
+    display: inline;
+  }
+`
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hasScrolled: false,
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  handleScroll = event => {
+    const scrollTop = window.pageYOffset
+
+    if (scrollTop > 50) {
+      this.setState({ hasScrolled: true })
+    } else {
+      this.setState({ hasScrolled: false })
+    }
+  }
+
+  render() {
+    return (
+      <div className="BannerGroup">
+        <div>
+          <Navbar
+            collapseOnSelect
+            expand="sm"
+            fixed={this.state.hasScrolled ? "top" : ""}
+          >
+            <Navbar.Brand href="/">LessonUp</Navbar.Brand>
+            <div>
+              <a href="tel:+61407145612">
+                <CallButton></CallButton>
+              </a>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                <ToggleButton></ToggleButton>
+              </Navbar.Toggle>
+            </div>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link href="../../study-support">Study Support</Nav.Link>
+                <Nav.Link href="../../tutoring">Tutoring</Nav.Link>
+                <Nav.Link href="../../online-courses">Online Courses</Nav.Link>
+                <Nav.Link href="../../about-us" className="small-hidden">
+                  About Us
+                </Nav.Link>
+              </Nav>
+              <Nav href="contact-us" className="call-to-action">
+                <Link to="contact-us">
+                  <MenuButton className="calltobutton">
+                    Enquire Today!
+                  </MenuButton>
+                </Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
+        <Container>
+          <Row>
+            <Col sm={7} md={5} style={{ margin: "auto 0" }}>
+              <div className="BannerHeader">
+                Learn to... <br />
+                <span>
+                  <Typed
+                    strings={[
+                      "Take notes correctly.",
+                      "Solve equations efficiently.",
+                      "Be ready for the exam.",
+                      "Be top of your class.",
+                      "Get a 99.95 ATAR.",
+                      "Be your best student.",
+                      "Tackle any problem.",
+                    ]}
+                    typeSpeed={100}
+                    backSpeed={80}
+                    loop={true}
+                  />
+                </span>
+              </div>
+              <div className="BannerSubtitle">
+                Supercharge your study experience with some of Victoria's most
+                trusted resources and tutors.
+              </div>
+            </Col>
+            <Col sm={5} md={7}>
+              <img
+                src={require("../images/lessonup-maths-chat.png")}
+                alt="LessonUP Banner"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    )
+  }
+}
+
+export default Header
